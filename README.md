@@ -1,74 +1,72 @@
-# Project Name : Emotion-recognition
-# Table of Content :
-1.[Description](#p1)
+# Emotions Recognition Application using CNN
 
-2.[Installations](#p2)
+The **Emotions Recognition Application** is built using a **Convolutional Neural Network (CNN)** to analyze facial expressions and detect a variety of human emotions. This project utilizes deep learning to classify emotions such as happiness, sadness, anger, surprise, and more. It can be applied in areas like customer service, security, and AI-based interactions.
 
-3.[Usage](#p3)
+## Features
+- Recognizes emotions from real-time facial images.
+- Supports emotion classes like happiness, sadness, surprise, anger, etc.
+- Built using TensorFlow/Keras with CNN architecture.
+- Can be integrated into various applications for human-computer interaction.
 
-4.[Dataset](#p4)
+## Requirements
 
+- Python 3.6+
+- TensorFlow 2.x
+- Keras
+- OpenCV
+- NumPy
+- Matplotlib
 
+## Installation
 
-![](https://github.com/omar178/Emotion-recognition/blob/master/emotions/Happy.PNG)
-![](https://github.com/omar178/Emotion-recognition/blob/master/emotions/angry.PNG)
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/engrsak/emotions-recognition-application-using-cnn.git
+    ```
 
-
-
-
-<a id="p1"></a> 
-# Description:
-
-Our Human face is having a mixed emotions so we are to demonstrate the probabilities of these emotions that we have.
-
-## What does Emotion Recognition mean?
-
-Emotion recognition is a technique used in software that allows a program to "read" the emotions on a human face using advanced image processing. Companies have been experimenting with combining sophisticated algorithms with image processing techniques that have emerged in the past ten years to understand more about what an image or a video of a person's face tells us about how he/she is feeling and not just that but also showing the probabilities of mixed emotions a face could has.
-
-<a id="p2"></a> 
-# Installations:
--keras
-
--imutils
-
--cv2
-
--numpy
-
-<a id="p3"></a> 
-# Usage:
-
-The program will creat a window to display the scene capture by webcamera and a window representing the probabilities of detected emotions.
-
-> Demo
-
-python real_time_video.py
-
-You can just use this with the provided pretrained model i have included in the path written in the code file, i have choosen this specificaly since it scores the best accuracy, feel free to choose any but in this case you have to run the later file train_emotion_classifier
-> If you just want to run this demo, the following content can be skipped
-- Train
-
-- python train_emotion_classifier.py
+2. Install the required Python packages
+3. Download the pre-trained model (or train your own)
+4. Run the application:
+    ```bash
+    python real_time_video.py
+    ```
 
 
-<a id="p4"></a> 
-# Dataset:
+## How it Works
 
-I have used [this](https://www.kaggle.com/c/3364/download-all) dataset
+This system uses a **Convolutional Neural Network (CNN)** to process and classify facial expressions into different emotion categories. The following steps summarize the process:
 
-Download it and put the csv in fer2013/fer2013/
+1. **Input Video:** Reading video frames using your camera.
+2. **Preprocessing:** The images are preprocessed (resizing, normalization, etc.).
+3. **Emotion Prediction:** The CNN model analyzes the image and predicts the emotion.
+4. **Output:** The predicted emotion is displayed on the screen.
 
--fer2013 emotion classification test accuracy: 66%
 
+## Training the Model
 
-# Credits
-This work is inspired from [this](https://github.com/oarriaga/face_classification) great work and the resources of Adrian Rosebrock helped me alot!.
+If you want to train the model from scratch or improve its accuracy, use the following steps:
 
-# Ongoing 
-Draw emotions faces next to the detected face.
+1. Prepare a dataset (e.g., the [FER-2013 dataset](https://www.kaggle.com/datasets/msambare/fer2013)).
+2. Train the model using the training script:
+    ```bash
+    python train_emotion_classifier.py
+    ```
 
-# Issues & Suggestions
+## Future Improvements
 
-If any issues and suggestions to me, you can create an [issue](https://github.com/omar178/Emotion-recognition/issues).
+- Add support for more emotions.
+- Optimize the model for real-time applications.
+- Implement better facial detection and alignment.
+- Cross-platform support for different devices.
 
-If you like this work please help me by giving me some stars.
+## License
+
+This project is open-source and licensed under the MIT License.
+
+## Acknowledgements
+
+- [FER-2013 Dataset](https://www.kaggle.com/datasets/msambare/fer2013)
+- TensorFlow/Keras Documentation
+
+## Credits
+This work is inspired from [this](https://github.com/oarriaga/face_classification) and was greatly enriched by the insightful resources and tutorials of Adrian Rosebrock.
